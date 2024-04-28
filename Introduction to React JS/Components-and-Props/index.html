@@ -14,15 +14,60 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      //   Write Your Code Here
-      const Welcome = (props) => {
-        console.log(props);
-        return <h1 className="message">Hello, User</h1>;
+      //props ex1
+
+    //   const Welcome = (props) => {
+    //     const {name,greeting}=props
+    //     return <h1 className="message">{greeting}, {name}</h1>;
+    //   };
+    //   ReactDOM.render(
+    //     <Welcome name="Rahul" greeting="Hello" />,
+    //     document.getElementById("root")
+    //   );
+
+
+
+    //props ex2..reusable
+        
+    // const Welcome = (props) => {
+    //     const {name,greeting}=props
+    //     return <h1 className="message">{greeting}, {name}</h1>;
+    //   };
+    //   ReactDOM.render(
+    //       <div>
+    //     <Welcome name="Rahul" greeting="Hello" />
+    //     <Welcome name="Ram" greeting="Bye" />
+    //     <Welcome name="Bhushan" greeting="Welcome" />
+        
+       
+    //     </div>, document.getElementById("root")
+    //   ); 
+    
+    
+
+
+
+    //props..ex3..composable
+
+    const Welcome = (props) => {
+        const {name,greeting}=props
+        return <h1 className="message">{greeting}, {name}</h1>;
       };
-      ReactDOM.render(
-        <Welcome name="Rahul" greeting="Hello" />,
-        document.getElementById("root")
-      );
-    </script>
+
+      const Greeting=()=>{
+        return(
+          <div>
+        
+        <Welcome name="Ram" greeting="Bye" />
+        <Welcome name="Bhushan" greeting="Welcome" />
+         </div>
+        )
+      }  
+     ReactDOM.render(<Greeting/> , document.getElementById("root") );
+      
+      
+      
+      
+      </script>
   </body>
 </html>
