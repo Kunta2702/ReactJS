@@ -1,0 +1,15 @@
+/* Write your code here. */
+.bg-container{
+    background-image: url("https://assets.ccbp.in/frontend/react-js/social-buttons-bg.png");
+height:100vh;width:100vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+title{
+    color:white;
+    font-size: large;
+    font-weight: bolder;
+font-family: Bree Serif;
+}
